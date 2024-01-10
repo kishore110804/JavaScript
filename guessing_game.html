@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+</head>
+<body>
+    <h1>Guess the number between 0 and 10</h1>
+    <input id="guessnumber">
+    <button onclick="check()">Check</button>
+    <p id="result">You are Wrong MF/RIGHT</p>
+    <p id="ransom">the number computer generated</p>
+
+    <script>
+        var guessnumber = document.getElementById("guessnumber");
+        var result = document.getElementById("result");
+
+        
+
+        function check() {
+            var randomnumber = Math.floor(Math.random() * 10);
+            var enterednumber = Number(guessnumber.value);
+
+            if (randomnumber === enterednumber) {
+                result.textContent = 'Right';
+                ransom.textContent = randomnumber
+                alert("You won this shit, man!");
+            } else {
+                result.textContent = 'Wrong';
+                ransom.textContent = randomnumber
+                alert("You guessed it wrong, buddy!");
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+</script>
